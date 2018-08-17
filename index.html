@@ -36,7 +36,7 @@
                     'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 
                     'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
-
+    //-----------------------------------------------------------------------------------------------------------//
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
 
@@ -59,9 +59,14 @@
     console.table(fifteen);
 
 
-
+    //------------------------------------------------------------------------------------------------------------//
+    //map takes in an array and creates new array
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+    //const fullNames = inventors.map(inventor=>inventor.first + ' ' + inventor.last); //using concatination
+    const fullNames = inventors.map(inventor=>`${inventor.first} ${inventor.last}`); //using concatination
+
+    console.log(fullNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
