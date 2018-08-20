@@ -145,10 +145,19 @@
     });
     console.table(alpha);
 
+    //------------------------------------------------------------------------------------------------------//
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const transport = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    const transportation = transport.reduce(function(obj, item){
+      if(!obj[item]){
+        obj[item] = 0;   //this will take care of adding this item into returned object so we can tally
+      }
+      obj[item]++;
+      //console.log(item);
+      return obj;
+    }, {  }); // start with emptry object, we could init {car: 0, walk:0, ...}
+    console.log(transportation);
   </script>
 </body>
 </html>
